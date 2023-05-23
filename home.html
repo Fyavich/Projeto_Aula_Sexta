@@ -14,7 +14,7 @@
     </header>
     <div>
         <form action="" method="POST">
-            <fieldset>
+            <fieldset class="nameField">
                 <legend>Encomenda</legend>
                 <label for="nome">Nome</label>
                 <input type="text" id="nomeCliente" name="nome" placeholder="Nome" required>
@@ -22,153 +22,269 @@
             <fieldset>
                 <legend>Itens</legend>
                 <label for="pedidos">Marque as opções desejadas:</label>
-                <div>
-                    <fieldset>
+                <div class="mainContent">
+                    <fieldset class="listItems">
                         <legend>Comidas</legend>
-                        <input type="checkbox" id="citem1" name="comida" value="Pão Francês" onchange="atualizarQtd(this)">
-                        <label for="citem1">Pão Francês</label>
-                        <label for="qtdcitem1">Qtd.</label>
-                        <input type="number" id="qtdcitem1" name="qtdcitem1" value="0">
-                        <br>
+                        <div class="elements">
+                            <div>
+                                <input type="checkbox" id="citem1" name="comida" value="Pão Francês" onchange="atualizarQtd(this)">
+                                <label for="citem1">Pão Francês</label>
+                            </div>
+                            <div>
+                                <label for="qtdcitem1">Qtd.</label>
+                                <input type="number" class="iQTD" id="qtdcitem1" name="qtdcitem1" value="0">
+                            </div>
+                        </div>
+                      
+                        <div class="elements">
+                            <div>
+                                <input type="checkbox" id="citem2" name="comida" value="Baguete" onchange="atualizarQtd(this)">
+                                <label for="citem2">Baguete</label>
+                            </div>
+                            <div>
+                                <label for="qtdcitem2">Qtd.</label>
+                                <input type="number" class="iQTD" id="qtdcitem2" name="qtdcitem2" value="0">
+                            </div>
+                        </div>
 
-                        <input type="checkbox" id="citem2" name="comida" value="Baguete" onchange="atualizarQtd(this)">
-                        <label for="citem2">Baguete</label>
-                        <label for="qtdcitem2">Qtd.</label>
-                        <input type="number" id="qtdcitem2" name="qtdcitem2" value="0">
-                        <br>
+                        <div class="elements">
+                            <div>
+                                <input type="checkbox" id="citem3" name="comida" value="Pão Integral" onchange="atualizarQtd(this)">
+                                <label for="citem3">Pão Integral</label>                                
+                            </div>
+                            <div>
+                                <label for="qtdcitem3">Qtd.</label>
+                                <input type="number" class="iQTD" id="qtdcitem3" name="qtdcitem3" value="0">
+                            </div>
+                        </div>
 
-                        <input type="checkbox" id="citem3" name="comida" value="Pão Integral" onchange="atualizarQtd(this)">
-                        <label for="citem3">Pão Integral</label>
-                        <label for="qtdcitem3">Qtd.</label>
-                        <input type="number" id="qtdcitem3" name="qtdcitem3" value="0">
-                        <br>
+                        <div class="elements">
+                            <div>
+                                <input type="checkbox" id="citem4" name="comida" value="Pão de Queijo" onchange="atualizarQtd(this)">
+                                <label for="citem4">Pão de Queijo</label>                                
+                            </div>
+                            <div>
+                                <label for="qtdcitem4">Qtd.</label>
+                                <input type="number" class="iQTD" id="qtdcitem4" name="qtdcitem4" value="0">
+                            </div>
+                        </div>
 
-                        <input type="checkbox" id="citem4" name="comida" value="Pão de Queijo" onchange="atualizarQtd(this)">
-                        <label for="citem4">Pão de Queijo</label>
-                        <label for="qtdcitem4">Qtd.</label>
-                        <input type="number" id="qtdcitem4" name="qtdcitem4" value="0">
-                        <br>
+                        <div class="elements">
+                            <div>
+                                <input type="checkbox" id="citem5" name="comida" value="Croissant" onchange="atualizarQtd(this)">
+                                <label for="citem5">Croissant</label>                                
+                            </div>
+                            <div>
+                                <label for="qtdcitem5">Qtd.</label>
+                                <input type="number" class="iQTD" id="qtdcitem5" name="qtdcitem5" value="0">
+                            </div>
+                        </div>
 
-                        <input type="checkbox" id="citem5" name="comida" value="Croissant" onchange="atualizarQtd(this)">
-                        <label for="citem5">Croissant</label>
-                        <label for="qtdcitem5">Qtd.</label>
-                        <input type="number" id="qtdcitem5" name="qtdcitem5" value="0">
-                        <br>
+                        <div class="elements">
+                            <div>
+                                <input type="checkbox" id="citem6" name="comida" value="Rosquinha" onchange="atualizarQtd(this)">
+                                <label for="citem6">Rosquinha</label>                                
+                            </div>
+                            <div>
+                                <label for="qtdcitem6">Qtd.</label>
+                                <input type="number" class="iQTD" id="qtdcitem6" name="qtdcitem6" value="0">
+                            </div>
+                        </div>
 
-                        <input type="checkbox" id="citem6" name="comida" value="Rosquinha" onchange="atualizarQtd(this)">
-                        <label for="citem6">Rosquinha</label>
-                        <label for="qtdcitem6">Qtd.</label>
-                        <input type="number" id="qtdcitem6" name="qtdcitem6" value="0">
-                        <br>
+                        <div class="elements">
+                            <div>
+                                <input type="checkbox" id="citem7" name="comida" value="Bolo de Chocolate" onchange="atualizarQtd(this)">
+                                <label for="citem7">Bolo de Chocolate</label>                                
+                            </div>
+                            <div>
+                                <label for="qtdcitem7">Qtd.</label>
+                                <input type="number" class="iQTD" id="qtdcitem7" name="qtdcitem7" value="0">
+                            </div>
+                        </div>
 
-                        <input type="checkbox" id="citem7" name="comida" value="Bolo de Chocolate" onchange="atualizarQtd(this)">
-                        <label for="citem7">Bolo de Chocolate</label>
-                        <label for="qtdcitem7">Qtd.</label>
-                        <input type="number" id="qtdcitem7" name="qtdcitem7" value="0">
-                        <br>
+                        <div class="elements">
+                            <div>
+                                <input type="checkbox" id="citem8" name="comida" value="Bolo de Cenoura" onchange="atualizarQtd(this)">
+                                <label for="citem8">Bolo de Cenoura</label>                                
+                            </div>
+                            <div>
+                                <label for="qtdcitem8">Qtd.</label>
+                                <input type="number" class="iQTD" id="qtdcitem8" name="qtdcitem8" value="0">
+                            </div>
+                        </div>
 
-                        <input type="checkbox" id="citem8" name="comida" value="Bolo de Cenoura" onchange="atualizarQtd(this)">
-                        <label for="citem8">Bolo de Cenoura</label>
-                        <label for="qtdcitem8">Qtd.</label>
-                        <input type="number" id="qtdcitem8" name="qtdcitem8" value="0">
-                        <br>
+                        <div class="elements">
+                            <div>
+                                <input type="checkbox" id="citem9" name="comida" value="Bolo de Fubá" onchange="atualizarQtd(this)">
+                                <label for="citem9">Bolo de Fubá</label>                                
+                            </div>
+                            <div>
+                                <label for="qtdcitem9">Qtd.</label>
+                                <input type="number" class="iQTD" id="qtdcitem9" name="qtdcitem9" value="0">
+                            </div>
+                        </div>
 
-                        <input type="checkbox" id="citem9" name="comida" value="Bolo de Fubá" onchange="atualizarQtd(this)">
-                        <label for="citem9">Bolo de Fubá</label>
-                        <label for="qtdcitem9">Qtd.</label>
-                        <input type="number" id="qtdcitem9" name="qtdcitem9" value="0">
-                        <br>
+                        <div class="elements">
+                            <div>
+                                <input type="checkbox" id="citem10" name="comida" value="Bolo de Milho" onchange="atualizarQtd(this)">
+                                <label for="citem10">Bolo de Milho</label>                                
+                            </div>
+                            <div>
+                                <label for="qtdcitem10">Qtd.</label>
+                                <input type="number" class="iQTD" id="qtdcitem10" name="qtdcitem10" value="0">
+                            </div>
+                        </div>
 
-                        <input type="checkbox" id="citem10" name="comida" value="Bolo de Milho" onchange="atualizarQtd(this)">
-                        <label for="citem10">Bolo de Milho</label>
-                        <label for="qtdcitem10">Qtd.</label>
-                        <input type="number" id="qtdcitem10" name="qtdcitem10" value="0">
-                        <br>
+                        <div class="elements">
+                            <div>
+                                <input type="checkbox" id="citem11" name="comida" value="Sonho" onchange="atualizarQtd(this)">
+                                <label for="citem11">Sonho</label>                                
+                            </div>
+                            <div>
+                                <label for="qtdcitem11">Qtd.</label>
+                                <input type="number" class="iQTD" id="qtdcitem11" name="qtdcitem11" value="0">
+                            </div>
+                        </div>
 
-                        <input type="checkbox" id="citem11" name="comida" value="Sonho" onchange="atualizarQtd(this)">
-                        <label for="citem11">Sonho</label>
-                        <label for="qtdcitem11">Qtd.</label>
-                        <input type="number" id="qtdcitem11" name="qtdcitem11" value="0">
-                        <br>
+                        <div class="elements">
+                            <div>
+                                <input type="checkbox" id="citem12" name="comida" value="Coxinha" onchange="atualizarQtd(this)">
+                                <label for="citem12">Coxinha</label>                                
+                            </div>
+                            <div>
+                                <label for="qtdcitem12">Qtd.</label>
+                                <input type="number" class="iQTD" id="qtdcitem12" name="qtdcitem12" value="0">
+                            </div>
+                        </div>
 
-                        <input type="checkbox" id="citem12" name="comida" value="Coxinha" onchange="atualizarQtd(this)">
-                        <label for="citem12">Coxinha</label>
-                        <label for="qtdcitem12">Qtd.</label>
-                        <input type="number" id="qtdcitem12" name="qtdcitem12" value="0">
-                        <br>
+                        <div class="elements">
+                            <div>
+                                <input type="checkbox" id="citem13" name="comida" value="Pastel de Queijo" onchange="atualizarQtd(this)">
+                                <label for="citem13">Pastel de Queijo</label>                                
+                            </div>
+                            <div>
+                                <label for="qtdcitem13">Qtd.</label>
+                                <input type="number" class="iQTD" id="qtdcitem13" name="qtdcitem13" value="0">
+                            </div>
+                        </div>
 
-                        <input type="checkbox" id="citem13" name="comida" value="Pastel de Queijo" onchange="atualizarQtd(this)">
-                        <label for="citem13">Pastel de Queijo</label>
-                        <label for="qtdcitem13">Qtd.</label>
-                        <input type="number" id="qtdcitem13" name="qtdcitem13" value="0">
-                        <br>
+                        <div class="elements">
+                            <div>
+                                <input type="checkbox" id="citem14" name="comida" value="Empada de Frango" onchange="atualizarQtd(this)">
+                                <label for="citem14">Empada de Frango</label>                                
+                            </div>
+                            <div>
+                                <label for="qtdcitem14">Qtd.</label>
+                                <input type="number" class="iQTD" id="qtdcitem14" name="qtdcitem14" value="0">
+                            </div>
+                        </div>
 
-                        <input type="checkbox" id="citem14" name="comida" value="Empada de Frango" onchange="atualizarQtd(this)">
-                        <label for="citem14">Empada de Frango</label>
-                        <label for="qtdcitem14">Qtd.</label>
-                        <input type="number" id="qtdcitem14" name="qtdcitem14" value="0">
-                        <br>
+                        <div class="elements">
+                            <div>
+                                <input type="checkbox" id="citem15" name="comida" value="Empada de Palmito" onchange="atualizarQtd(this)">
+                                <label for="citem15">Empada de Palmito</label>                                
+                            </div>
+                            <div>
+                                <label for="qtdcitem15">Qtd.</label>
+                                <input type="number" class="iQTD" id="qtdcitem15" name="qtdcitem15" value="0">
+                            </div>
+                        </div>
 
-                        <input type="checkbox" id="citem15" name="comida" value="Empada de Palmito" onchange="atualizarQtd(this)">
-                        <label for="citem15">Empada de Palmito</label>
-                        <label for="qtdcitem15">Qtd.</label>
-                        <input type="number" id="qtdcitem15" name="qtdcitem15" value="0">
-                        <br>
+                        <div class="elements">
+                            <div>
+                                <input type="checkbox" id="citem16" name="comida" value="Enroladinho de Salsicha" onchange="atualizarQtd(this)">
+                                <label for="citem16">Enroladinho de Salsicha</label>                                
+                            </div>
+                            <div>
+                                <label for="qtdcitem16">Qtd.</label>
+                                <input type="number" class="iQTD" id="qtdcitem16" name="qtdcitem16" value="0">
+                            </div>
+                        </div>
 
-                        <input type="checkbox" id="citem16" name="comida" value="Enroladinho de Salsicha" onchange="atualizarQtd(this)">
-                        <label for="citem16">Enroladinho de Salsicha</label>
-                        <label for="qtdcitem16">Qtd.</label>
-                        <input type="number" id="qtdcitem16" name="qtdcitem16" value="0">
-                        <br>
-
-                        <input type="checkbox" id="citem17" name="comida" value="Queijo Quente" onchange="atualizarQtd(this)">
-                        <label for="citem17">Queijo Quente</label>
-                        <label for="qtdcitem17">Qtd.</label>
-                        <input type="number" id="qtdcitem17" name="qtdcitem17" value="0">
-                        <br>
+                        <div class="elements">
+                            <div>
+                                <input type="checkbox" id="citem17" name="comida" value="Queijo Quente" onchange="atualizarQtd(this)">
+                                <label for="citem17">Queijo Quente</label>                                
+                            </div>
+                            <div>
+                                <label for="qtdcitem17">Qtd.</label>
+                                <input type="number" class="iQTD" id="qtdcitem17" name="qtdcitem17" value="0">
+                            </div>
+                        </div>
                     </fieldset>
 
-                    <fieldset>
+                    <fieldset class="listItems">
                         <legend>Bebidas</legend>
-                        <input type="checkbox" id="bitem1" name="bebida" value="Café Expresso" onchange="atualizarQtd(this)">
-                        <label for="bitem1">Café Expresso</label>
-                        <label for="qtdbitem1">Qtd.</label>
-                        <input type="number" id="qtdbitem1" name="qtdbitem1" value="0">
-                        <br>
 
-                        <input type="checkbox" id="bitem2" name="bebida" value="Cappuccino" onchange="atualizarQtd(this)">
-                        <label for="bitem2">Cappuccino</label>
-                        <label for="qtdbitem2">Qtd.</label>
-                        <input type="number" id="qtdbitem2" name="qtdbitem2" value="0">
-                        <br>
+                        <div class="elements">
+                            <div>
+                                <input type="checkbox" id="bitem1" name="bebida" value="Café Expresso" onchange="atualizarQtd(this)">
+                                <label for="bitem1">Café Expresso</label>                                                         
+                            </div>
+                            <div>
+                                <label for="qtdbitem1">Qtd.</label>
+                                <input type="number" class="iQTD" id="qtdbitem1" name="qtdbitem1" value="0"> 
+                            </div>
+                        </div>
 
-                        <input type="checkbox" id="bitem3" name="bebida" value="Suco Natural" onchange="atualizarQtd(this)">
-                        <label for="bitem3">Suco Natural</label>
-                        <label for="qtdbitem3">Qtd.</label>
-                        <input type="number" id="qtdbitem3" name="qtdbitem3" value="0">
-                        <br>
+                        <div class="elements">
+                            <div>
+                                <input type="checkbox" id="bitem2" name="bebida" value="Cappuccino" onchange="atualizarQtd(this)">
+                                <label for="bitem2">Cappuccino</label>                                                         
+                            </div>
+                            <div>
+                                <label for="qtdbitem2">Qtd.</label>
+                                <input type="number" class="iQTD" id="qtdbitem2" name="qtdbitem2" value="0">  
+                            </div>
+                        </div>
 
-                        <input type="checkbox" id="bitem4" name="bebida" value="Chocolate Quente" onchange="atualizarQtd(this)">
-                        <label for="bitem4">Chocolate Quente</label>
-                        <label for="qtdbitem4">Qtd.</label>
-                        <input type="number" id="qtdbitem4" name="qtdbitem4" value="0">
-                        <br>
+                        <div class="elements">
+                            <div>
+                                <input type="checkbox" id="bitem3" name="bebida" value="Suco Natural" onchange="atualizarQtd(this)">
+                                <label for="bitem3">Suco Natural</label>                                                          
+                            </div>
+                            <div>
+                                <label for="qtdbitem3">Qtd.</label>
+                                <input type="number" class="iQTD" id="qtdbitem3" name="qtdbitem3" value="0"> 
+                            </div>
+                        </div>
 
-                        <input type="checkbox" id="bitem5" name="bebida" value="Refrigerante" onchange="atualizarQtd(this)">
-                        <label for="bitem5">Refrigerante</label>
-                        <label for="qtdbitem5">Qtd.</label>
-                        <input type="number" id="qtdbitem5" name="qtdbitem5" value="0">
-                        <br>
+                        <div class="elements">
+                            <div>
+                                <input type="checkbox" id="bitem4" name="bebida" value="Chocolate Quente" onchange="atualizarQtd(this)">
+                                <label for="bitem4">Chocolate Quente</label>                                                     
+                            </div>
+                            <div>
+                                <label for="qtdbitem4">Qtd.</label>
+                                <input type="number" class="iQTD" id="qtdbitem4" name="qtdbitem4" value="0">     
+                            </div>
+                        </div>
 
-                        <input type="checkbox" id="bitem6" name="bebida" value="Caldo de Cana" onchange="atualizarQtd(this)">
-                        <label for="bitem6">Caldo de Cana</label>
-                        <label for="qtdbitem6">Qtd.</label>
-                        <input type="number" id="qtdbitem6" name="qtdbitem6" value="0">
-                        <br>
+                        <div class="elements">
+                            <div>
+                                <input type="checkbox" id="bitem5" name="bebida" value="Refrigerante" onchange="atualizarQtd(this)">
+                                <label for="bitem5">Refrigerante</label>                                                     
+                            </div>
+                            <div>
+                                <label for="qtdbitem5">Qtd.</label>
+                                <input type="number" class="iQTD" id="qtdbitem5" name="qtdbitem5" value="0">   
+                            </div>
+                        </div>
+
+                        <div class="elements">
+                            <div>
+                                <input type="checkbox" id="bitem6" name="bebida" value="Caldo de Cana" onchange="atualizarQtd(this)">
+                                <label for="bitem6">Caldo de Cana</label>                                                      
+                            </div>
+                            <div>
+                                <label for="qtdbitem6">Qtd.</label>
+                                <input type="number" class="iQTD" id="qtdbitem6" name="qtdbitem6" value="0">   
+                            </div>
+                        </div>
                     </fieldset>
                 </div>   
                 
-                <button type="button" onclick="gerarPedido()">Encomendar</button>
+                <button type="button" class="btnEncomendar" onclick="gerarPedido()">Encomendar</button>
                 
             </fieldset>
         </form>
@@ -176,9 +292,22 @@
 
     <div>
         <fieldset>
+            <legend>Comandos</legend>
+            <div>
+                <label for="filaTamanho">Tamanho da Fila: </label>
+                <input name="filaTamanho" id="filaTamanho" value="0" readonly></output>  
+            </div>
+            
+            <div>
+                <button>Pedido Feito</button>
+            </div>
+
+        </fieldset>
+    </div>
+
+    <div>
+        <fieldset>
             <legend>Lista de Pedidos</legend>
-            <label for="filaTamanho">Tamanho da Fila: </label>
-            <input name="filaTamanho" id="filaTamanho" value="0" readonly></output>
             <div id="container"></div>
         </fieldset>     
     </div>

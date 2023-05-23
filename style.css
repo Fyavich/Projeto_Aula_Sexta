@@ -1,0 +1,27 @@
+.iQTD{
+    width: 40px;
+    border: 1px solid red;
+}
+
+.elements{
+    display: flex;
+    justify-content: space-between;
+}
+
+.mainContent{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.listItems{
+    width: 50%;
+    min-width: 270px;
+}
+
+.nameField{
+    min-width: 605px;
+}
+
+.btnEncomendar{
+    margin: 10px;
+}
