@@ -95,6 +95,20 @@ function gerarPedido(){
     proximoCliete()
     mostrarPedidos();
 
+    resetCheckbox();
+}
+
+function resetCheckbox(){
+    var allCheckbox = document.querySelectorAll('input[type="checkbox"]');
+
+    allCheckbox.forEach(function(checkbox){
+        var qtdInput = document.getElementById("qtd" + checkbox.id);
+        checkbox.checked = false;
+        qtdInput.value = 0;
+    });
+
+    var nomeCliente = document.getElementById("nomeCliente");
+    nomeCliente.value = "";
 }
 
 function atualizarQtd(checkbox){
@@ -157,7 +171,7 @@ function localizarCliente(){
     clienteLocalizado.innerHTML = "";
 
     try{
-        
+
         var localizar = pedidos.encomendas.find(function(e){
             return e.cliente.toLowerCase() === cliente.value.toLowerCase();
         });
@@ -184,6 +198,13 @@ function localizarCliente(){
     clienteLocalizado.appendChild(lista);
 
     console.log(localizar);
+}
+
+function pedidoFeito(){
+    pedidos.desenfileirar();
+
+    mostrarPedidos();
+    proximoCliete();
 }
 
 mostrarPedidos();
