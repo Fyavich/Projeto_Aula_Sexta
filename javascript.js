@@ -147,13 +147,17 @@ function mostrarPedidos(){
         container.appendChild(lista);
     }
 
-    console.log(pedidos);
 }
 
 function proximoCliete(){
     var cliente = document.getElementById("proximoCliente");
 
-    cliente.innerHTML = pedidos.encomendas[0].cliente;
+    if(pedidos.tamanho() === 0){
+        cliente.innerHTML = "";
+    }else{
+        cliente.innerHTML = pedidos.encomendas[0].cliente;
+    }
+    
 }
 
 function localizarCliente(){
@@ -197,7 +201,6 @@ function localizarCliente(){
 
     clienteLocalizado.appendChild(lista);
 
-    console.log(localizar);
 }
 
 function pedidoFeito(){
