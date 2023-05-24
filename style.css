@@ -1,6 +1,8 @@
+
+
 .iQTD{
     width: 40px;
-    border: 1px solid red;
+    text-align: right;
 }
 
 .elements{
@@ -18,10 +20,48 @@
     min-width: 270px;
 }
 
-.nameField{
+.nameField, .comandosField, .listaField{
     min-width: 605px;
 }
 
 .btnEncomendar{
     margin: 10px;
+}
+
+.lista-pedidos{
+    width: 20%;
+    padding: 10px;
+    min-width: 270px;
+    border: 2px dotted red;
+}
+
+#itens-pedido{
+    display: flex;
+    justify-content: space-between;
+}
+
+h3, h4, p{
+    margin: 5px;
+    padding: 0;
+}
+
+#filaTamanho{
+    width: 20px;
+    text-align: center;
+}
+
+.btnComandos{
+    display: flex;
+    justify-content: space-between;
+}
+
+.btnPedidos{
+    font-size: 18px;
+    font-weight: bold;
+    padding: 5px;
+}
+
+.listaContainer{
+    display: flex;
+    justify-content: space-evenly;
 }

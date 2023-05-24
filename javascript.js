@@ -92,7 +92,9 @@ function gerarPedido(){
 
     pedidos.enfileirar(encomenta);
 
+    proximoCliete()
     mostrarPedidos();
+
 }
 
 function atualizarQtd(checkbox){
@@ -113,24 +115,75 @@ function mostrarPedidos(){
 
     for(var i = 0; i<pedidos.tamanho(); i++){
         var lista = document.createElement("div");
+        lista.classList.add("lista-pedidos");
         
         lista.innerHTML += "<h3>Cliente: " + pedidos.encomendas[i].cliente + "</h3>";
 
         lista.innerHTML += "<h4>Pedidos</h4>";
         for(var j = 0; j < pedidos.encomendas[i].comidas.length; j++){
-            lista.innerHTML += "<p>Item: " + pedidos.encomendas[i].comidas[j].item + " QTD: " + 
-            pedidos.encomendas[i].comidas[j].qtd + "</p>";
+            lista.innerHTML += "<div id='itens-pedido'><p>Item: " + pedidos.encomendas[i].comidas[j].item + "</p> <p>QTD: " + 
+            pedidos.encomendas[i].comidas[j].qtd + "</p></div>";
         }
 
         for(var k = 0; k < pedidos.encomendas[i].bebidas.length; k++){
-            lista.innerHTML += "<p>Item: " + pedidos.encomendas[i].bebidas[k].item + " QTD: " + 
-            pedidos.encomendas[i].bebidas[k].qtd + "</p>";
+            lista.innerHTML += "<div id='itens-pedido'><p>Item: " + pedidos.encomendas[i].bebidas[k].item + "</p> <p>QTD: " + 
+            pedidos.encomendas[i].bebidas[k].qtd + "</p></div>";
         }
 
         container.appendChild(lista);
     }
 
     console.log(pedidos);
+}
+
+function proximoCliete(){
+    var cliente = document.getElementById("proximoCliente");
+
+    cliente.innerHTML = pedidos.encomendas[0].cliente;
+}
+
+function localizarCliente(){
+    var clienteLocalizado = document.getElementById("clienteLocalizado");
+    var cliente = document.getElementById("localizarCliente");
+
+    if(cliente.value == ''){
+        clienteLocalizado.innerHTML = ""; 
+        return;
+    }
+ 
+    var lista = document.createElement("div");
+    lista.classList.add("lista-pedidos");
+
+    clienteLocalizado.innerHTML = "";
+
+    try{
+        
+        var localizar = pedidos.encomendas.find(function(e){
+            return e.cliente.toLowerCase() === cliente.value.toLowerCase();
+        });
+
+        lista.innerHTML += "<h3>Cliente: " + localizar.cliente + "</h3>";
+
+        lista.innerHTML += "<h4>Pedidos</h4>";
+        for(var j = 0; j < localizar.comidas.length; j++){
+            lista.innerHTML += "<div id='itens-pedido'><p>Item: " + localizar.comidas[j].item + "</p> <p>QTD: " + 
+            localizar.comidas[j].qtd + "</p></div>";
+        }
+
+        for(var k = 0; k < localizar.bebidas.length; k++){
+            lista.innerHTML += "<div id='itens-pedido'><p>Item: " + localizar.bebidas[k].item + "</p> <p>QTD: " + 
+            localizar.bebidas[k].qtd + "</p></div>";
+        }
+
+    }catch(e){
+        var localizar = "Pedido de cliente não encontrado!"
+        
+        lista.innerHTML += localizar;
+    }
+
+    clienteLocalizado.appendChild(lista);
+
+    console.log(localizar);
 }
 
 mostrarPedidos();

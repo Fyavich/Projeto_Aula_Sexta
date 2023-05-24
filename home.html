@@ -291,28 +291,42 @@
     </div>
 
     <div>
-        <fieldset>
+        <fieldset class="comandosField">
             <legend>Comandos</legend>
-            <div>
-                <label for="filaTamanho">Tamanho da Fila: </label>
-                <input name="filaTamanho" id="filaTamanho" value="0" readonly></output>  
+            <div class="btnComandos">
+                <div>
+                    <label for="filaTamanho">Tamanho da Fila: </label>
+                    <input name="filaTamanho" id="filaTamanho" value="0" readonly></output>  
+                </div>
+                
+                <div>
+                    <button class="btnPedidos">Pedido Feito</button>
+                    <span id="proximoCliente"></span>
+                </div>
+    
+                <div>
+                    <button class="btnPedidos" onclick="localizarCliente()">Localizar Pedido Cliente</button>
+                    <input type="text" id="localizarCliente">
+                </div>
             </div>
-            
-            <div>
-                <button>Pedido Feito</button>
-            </div>
-
-            <div>
-                <button>Localizar Pedido Cliente</button>
-            </div>
-
         </fieldset>
     </div>
 
     <div>
-        <fieldset>
-            <legend>Lista de Pedidos</legend>
-            <div id="container"></div>
+        <fieldset class="listaField">
+                
+            <div class="listaContainer">
+                <fieldset class="listItems">
+                    <legend>Lista de Pedidos</legend>
+                    <div id="container"></div>
+                </fieldset>
+                
+                <fieldset class="listItems">
+                    <legend>Cliente</legend>
+                    <div id="clienteLocalizado"></div>
+                </fieldset> 
+            </div>               
+
         </fieldset>     
     </div>
 
